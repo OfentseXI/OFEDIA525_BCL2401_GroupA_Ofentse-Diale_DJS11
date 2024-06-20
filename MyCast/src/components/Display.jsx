@@ -1,5 +1,6 @@
 import React from 'react'
 import DisplayHome from './DisplayHome'
+import { Routes, Link, Route } from 'react-router-dom'
 
 const Display = () => {
   return (
