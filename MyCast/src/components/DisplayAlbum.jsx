@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 
-const displayAlbum = () => {
+const DisplayAlbum = () => {
   return (
     <>
       <Navbar/>
@@ -9,4 +9,4 @@ const displayAlbum = () => {
   )
 }
 
-export default displayAlbum
+export default DisplayAlbum
