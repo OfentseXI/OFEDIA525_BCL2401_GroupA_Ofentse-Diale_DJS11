@@ -4,7 +4,7 @@ import { AudioPlayerContext } from '../context/AudioPlayerContext'
 
 const AudioPlayer = () => {
 
-  const {seekBar,seekBg} = useContext(AudioPlayerContext);
+  const {seekBar,seekBg,playing,play,pause} = useContext(AudioPlayerContext);
 
   return (
     <div className='h-[10%] bg-black flex justify-betweenn items-center text-white px-4'>
@@ -19,7 +19,12 @@ const AudioPlayer = () => {
         <div className='flex gap-4'>
             <img className='w-4 cursor-pointer' src={assets.shuffle_icon} alt="" />
             <img className='w-4 cursor-pointer' src={assets.prev_icon} alt="" />
-            <img className='w-4 cursor-pointer' src={assets.play_icon} alt="" />
+            {playing ? 
+            <img onClick={pause} className='w-4 cursor-pointer' src={assets.pause_icon} alt="" />
+            : <img onClick={play} className='w-4 cursor-pointer' src={assets.play_icon} alt="" /> 
+            }
+           
+            
             <img className='w-4 cursor-pointer' src={assets.next_icon} alt="" />
             <img className='w-4 cursor-pointer' src={assets.loop_icon} alt="" />
         </div>
